@@ -12,6 +12,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/gridwiz.rc")
+
 set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
@@ -19,6 +21,7 @@ set(PROJECT_SOURCES
         mainwindow.ui
         counter.h counter.cpp
         browser.h browser.cpp
+        ${app_icon_resource_windows}
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
