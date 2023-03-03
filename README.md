@@ -8,6 +8,6 @@ This re-write is mainly to provide an oppertunity for me (@GavinHenderson) to le
 
 # Tasks
 
-- [ ] Make exit quit
-- [ ] Add key command for quit
+- [x] Make exit quit
+- [x] Add key command for quit
 - [x] Make browser open from app
