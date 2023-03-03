@@ -1,7 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "counter.h"
-
+#include <QApplication>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -29,10 +29,15 @@ MainWindow::MainWindow(QWidget *parent)
     QObject::connect(ui->toolbarAbout, SIGNAL(triggered()),
                      &browser, SLOT(openAbout()));
 
-
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_toolbarExit_triggered()
+{
+    QApplication::quit();
+}
+

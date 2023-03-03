@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>GridWiz</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="increaseButton">
@@ -62,7 +62,7 @@
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionExit"/>
+    <addaction name="toolbarExit"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuHelp_and_Support"/>
@@ -83,9 +83,12 @@
     <string>Learn about Ace Centre</string>
    </property>
   </action>
-  <action name="actionExit">
+  <action name="toolbarExit">
    <property name="text">
     <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
    </property>
   </action>
  </widget>

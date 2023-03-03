@@ -19,6 +19,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void on_toolbarExit_triggered();
+
 private:
     Ui::MainWindow *ui;
     Counter counter;
