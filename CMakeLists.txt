@@ -18,6 +18,7 @@ set(PROJECT_SOURCES
         mainwindow.h
         mainwindow.ui
         counter.h counter.cpp
+        browser.h browser.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
