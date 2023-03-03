@@ -50,8 +50,44 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuHelp_and_Support">
+    <property name="title">
+     <string>Help and Support</string>
+    </property>
+    <addaction name="toolbarFeedback"/>
+    <addaction name="toolbarIssues"/>
+    <addaction name="toolbarAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp_and_Support"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="toolbarFeedback">
+   <property name="text">
+    <string>Send feedback</string>
+   </property>
+  </action>
+  <action name="toolbarIssues">
+   <property name="text">
+    <string>View current open issues</string>
+   </property>
+  </action>
+  <action name="toolbarAbout">
+   <property name="text">
+    <string>Learn about Ace Centre</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
