@@ -16,6 +16,20 @@ MainWindow::MainWindow(QWidget *parent)
     // When the counter fires labelChanged, then the setText is called
     QObject::connect(&counter, SIGNAL(labelChanged(QString)),
                      ui->countLabel, SLOT(setText(QString)));
+
+    QObject::connect(ui->toolbarFeedback, SIGNAL(triggered()),
+                     &browser, SLOT(openContact()));
+
+
+    QObject::connect(ui->toolbarIssues, SIGNAL(triggered()),
+                     &browser, SLOT(openIssues()));
+
+
+
+    QObject::connect(ui->toolbarAbout, SIGNAL(triggered()),
+                     &browser, SLOT(openAbout()));
+
+
 }
 
 MainWindow::~MainWindow()

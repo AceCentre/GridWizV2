@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "counter.h"
+#include "browser.h"
 
 #include <QMainWindow>
 #include <qpointer.h>
@@ -21,5 +22,6 @@ public:
 private:
     Ui::MainWindow *ui;
     Counter counter;
+    Browser browser;
 };
 #endif // MAINWINDOW_H
