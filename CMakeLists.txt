@@ -12,6 +12,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
+# We should only add this resource file on windows, it will fail to compile for other platforms
 set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/gridwiz.rc")
 
 set(PROJECT_SOURCES
