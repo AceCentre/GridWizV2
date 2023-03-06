@@ -20,8 +20,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
-        counter.h counter.cpp
         browser.h browser.cpp
+        searchcontroller.h searchcontroller.cpp
         ${app_icon_resource_windows}
 )
 
