@@ -1,8 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include "counter.h"
 #include "browser.h"
+#include "searchcontroller.h"
 
 #include <QMainWindow>
 #include <qpointer.h>
@@ -24,7 +24,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    Counter counter;
     Browser browser;
+    SearchController search;
 };
+
 #endif // MAINWINDOW_H

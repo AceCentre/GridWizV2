@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "counter.h"
 #include <QApplication>
 
 MainWindow::MainWindow(QWidget *parent)
@@ -9,26 +8,32 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // When button is clicked, increment is called
-    QObject::connect(ui->increaseButton, SIGNAL(clicked()),
-                     &counter, SLOT(increment()));
-
-    // When the counter fires labelChanged, then the setText is called
-    QObject::connect(&counter, SIGNAL(labelChanged(QString)),
-                     ui->countLabel, SLOT(setText(QString)));
-
+    /*
+     * Connect toolbar components to browser links
+     */
     QObject::connect(ui->toolbarFeedback, SIGNAL(triggered()),
                      &browser, SLOT(openContact()));
-
 
     QObject::connect(ui->toolbarIssues, SIGNAL(triggered()),
                      &browser, SLOT(openIssues()));
 
-
-
     QObject::connect(ui->toolbarAbout, SIGNAL(triggered()),
                      &browser, SLOT(openAbout()));
 
+    /*
+     * Connect search form components to search class
+     */
+    QObject::connect(ui->searchTextInput, SIGNAL(textChanged(QString)),
+                     &search, SLOT(setSearchText(QString)));
+
+    QObject::connect(ui->safeSearch, SIGNAL(stateChanged(int)),
+                     &search, SLOT(setSafeSearch(int)));
+
+
+    /*
+     * Set default values
+     */
+    ui->safeSearch->setCheckState(search.getSafeSearch());
 }
 
 MainWindow::~MainWindow()
